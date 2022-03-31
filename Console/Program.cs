@@ -23,19 +23,19 @@ namespace GithubActionsLab
                     switch (operationSelection)
                     {
                         case "1":
-                            operation = Add;
+                            operation = Add_Hoyt;
                             break;
                         case "2":
-                            operation = Subtract;
+                            operation = Subtract_Hoyt;
                             break;
                         case "3":
-                            operation = Multiply;
+                            operation = Multiply_Hoyt;
                             break;
                         case "4":
-                            operation = Divide;
+                            operation = Divide_Hoyt;
                             break;
                         case "5":
-                            operation = Power;
+                            operation = Power_Hoyt;
                             break;
                         case "6":
                             loop = false;
@@ -63,26 +63,26 @@ namespace GithubActionsLab
             return Console.ReadLine().Trim();
         }
 
-        public static double Add(string x, string y)
+        public static double Add_Hoyt(string x, string y)
         {
             return double.Parse(x) + double.Parse(y);
         }
 
-        public static double Subtract(string x, string y)
+        public static double Subtract_Hoyt(string x, string y)
         {
             return double.Parse(x) - double.Parse(y);
         }
-        public static double Multiply(string x, string y)
+        public static double Multiply_Hoyt(string x, string y)
         {
             return double.Parse(x) * double.Parse(y);
         }
-        public static double Divide(string x, string y)
+        public static double Divide_Hoyt(string x, string y)
         {
             return double.Parse(x) / double.Parse(y);
         }
 
         // Implement this method following a similar pattern as above
-        public static double Power(string x, string y)
+        public static double Power_Hoyt(string x, string y)
         {
             return Math.Pow(double.Parse(x), double.Parse(y));
         }
