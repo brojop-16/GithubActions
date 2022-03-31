@@ -102,5 +102,29 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide_Hoyt(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Divide_Hoyt(null, null));
         }
+
+        [Test]
+        public void Power_Valid_Hoyt()
+        {
+            Assert.AreEqual(1, Program.Power_Hoyt("1", "2"));
+            Assert.AreEqual(9, Program.Power_Hoyt("3", "2"));
+            Assert.AreEqual(8, Program.Power_Hoyt("2", "3"));
+        }
+
+        [Test]
+        public void Power_Invalid_Hoyt()
+        {
+            Assert.Throws<FormatException>(() => Program.Power_Hoyt("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power_Hoyt("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power_Hoyt("a", "a"));
+        }
+
+        [Test]
+        public void Power_Null_Hoyt()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power_Hoyt("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power_Hoyt(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power_Hoyt(null, null));
+        }
     }
 }
