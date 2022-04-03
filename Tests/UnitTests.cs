@@ -69,7 +69,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Sub_Invalid_Le()
+        public void Mul_Invalid_Le()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
             Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
@@ -77,7 +77,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Sub_Null_Le()
+        public void Mul_Null_Le()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
