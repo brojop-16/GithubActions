@@ -118,12 +118,12 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("a", "a"));
         }
 
-        [Test]
-        public void Add_Null()
-        {
-            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
-            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
-            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+//         [Test]
+//         public void Add_Null()
+//         {
+//             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+//             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+//             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
