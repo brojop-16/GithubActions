@@ -83,7 +83,7 @@ namespace GithubActionsLab
         {
             Assert.AreEqual(1, Program.Divide("2", "2"));
             Assert.AreEqual(2, Program.Divide("4", "2"));
-            Assert.AreEqual(14, Program.Divide("28", "7"));
+            Assert.AreEqual(4, Program.Divide("28", "7"));
         }
 
         [Test]
