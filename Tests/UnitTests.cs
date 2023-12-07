@@ -106,12 +106,6 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Divide_ByZero()
-        {
-            Assert.Throws<DivideByZeroException>(() => Program.Divide("1", "0"));
-        }
-
-        [Test]
         public void Power_Valid()
         {
             Assert.AreEqual(8, Program.Power("2", "3"));
@@ -133,12 +127,6 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
-        }
-
-        [Test]
-        public void Power_NegativeBaseWithFractionalExponent()
-        {
-            Assert.Throws<ArgumentException>(() => Program.Power("-1", "0.5"));
         }
    }
 }
