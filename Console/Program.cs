@@ -84,7 +84,7 @@ namespace GithubActionsLab
         // Implement this method following a similar pattern as above
         public static double Power(double x, double y)
         {
-            return Math.Pow(x, y);
+            return double.Pow(x, y);
         }
     }
 
