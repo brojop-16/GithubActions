@@ -9,7 +9,7 @@ namespace GithubActionsLab
             Console.WriteLine("The Quick Calculator");
             var loop = true;
             while (loop)
-            {
+            { 
                 try
                 {
                     Func<string, string, double> operation = null;
