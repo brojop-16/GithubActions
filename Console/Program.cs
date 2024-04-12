@@ -80,8 +80,7 @@ namespace GithubActionsLab
         {
             return double.Parse(x) / double.Parse(y);
         }
-
-        // Implement this method following a similar pattern as above
+        
         public static double Power(string x, string y)
         {
             return Math.pow(double.Parse(x), double.Parse(y));
