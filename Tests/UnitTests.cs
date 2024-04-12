@@ -114,15 +114,15 @@ namespace GithubActionsLab
         [Test]
         public void Power_Valid()
         {
-            Assert.AreEqual(8, Program.Pow("2", "3"));
-            Assert.AreEqual(9, Program.Pow("3", "2"));
-            Assert.AreEqual(1, Program.Pow("5", "0"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+            Assert.AreEqual(9, Program.Power("3", "2"));
+            Assert.AreEqual(1, Program.Power("5", "0"));
         }
 
         [Test]
         public void Power_Invalid()
         {
-            Assert.Throws<FormatException>(() => Program.Pow("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
             Assert.Throws<FormatException>(() => Program.Power("a", "a"));
         }
