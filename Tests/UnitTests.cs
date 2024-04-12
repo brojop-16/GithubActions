@@ -30,6 +30,35 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Subtract_Valid_Gurney()
+        {
+            Assert.AreEqual(0, Program.Subtract("2", "2"));
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
+            Assert.AreEqual(10, Program.Subtract("15", "5"));
+        }
+
+        [Test]
+        public void Multiply_Valid_Gurney()
+        {
+            Assert.AreEqual(4, Program.Multiply("2", "2"));
+            Assert.AreEqual(0, Program.Multiply("0", "5"));
+            Assert.AreEqual(-10, Program.Multiply("2", "-5"));
+        }
+
+        [Test]
+        public void Divide_Valid_Gurney()
+        {
+            Assert.AreEqual(1, Program.Divide("2", "2"));
+            Assert.AreEqual(2, Program.Divide("10", "5"));
+            Assert.Throws<DivideByZeroException>(() => Program.Divide("5", "0"));
+        }
+
+        [Test]
+        public void Power_Valid()
+        {
+            Assert.AreEqual(9, Program.Power("3", "2"));
+        }
+
     }
 }
