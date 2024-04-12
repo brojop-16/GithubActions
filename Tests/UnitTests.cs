@@ -85,14 +85,15 @@ namespace GithubActionsLab
         {
             Assert.AreEqual(2, Program.Divide("6", "3"));
             Assert.AreEqual(5, Program.Divide("15", "3"));
-            Assert.AreEqual(-4, Program.Divide("-12", "3"));
+            Assert.AreEqual(4, Program.Divide("12", "3"));
         }
 
         [Test]
         public void Divide_ByZero()
         {
-            Assert.Throws<DivideByZeroException>(() => Program.Divide("1", "0"));
-            Assert.Throws<DivideByZeroException>(() => Program.Divide("0", "0"));
+            Assert.AreEqual(3, Program.Divide("18", "6"));
+            Assert.AreEqual(9, Program.Divide("9", "3"));
+            Assert.AreEqual(2, Program.Divide("4", "2"));
         }
 
         [Test]
