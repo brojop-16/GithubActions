@@ -31,6 +31,7 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
         public void Power_Valid()
         {
             Assert.AreEqual(1, Program.Add("1", "10"));
@@ -38,7 +39,7 @@ namespace GithubActionsLab
             Assert.AreEqual(125, Program.Add("5", "3"));
         }
 
-        [TestMethod]
+        [Test]
         public void Power_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "zero"));
@@ -46,7 +47,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Add("zero",  "zero"));
         }
 
-        [TestMethod]
+        [Test]
         public void Power_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("5", null));
