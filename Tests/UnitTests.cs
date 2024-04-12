@@ -34,25 +34,25 @@ namespace GithubActionsLab
         [Test]
         public void Power_Valid()
         {
-            Assert.AreEqual(1, Program.Add("1", "10"));
-            Assert.AreEqual(36, Program.Add("6", "2"));
-            Assert.AreEqual(125, Program.Add("5", "3"));
+            Assert.AreEqual(1, Program.Power("1", "10"));
+            Assert.AreEqual(36, Program.Power("6", "2"));
+            Assert.AreEqual(125, Program.Power("5", "3"));
         }
 
         [Test]
         public void Power_Invalid()
         {
-            Assert.Throws<FormatException>(() => Program.Add("1", "zero"));
-            Assert.Throws<FormatException>(() => Program.Add("twelve", "1"));
-            Assert.Throws<FormatException>(() => Program.Add("zero",  "zero"));
+            Assert.Throws<FormatException>(() => Program.Power("1", "zero"));
+            Assert.Throws<FormatException>(() => Program.Power("twelve", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("zero",  "zero"));
         }
 
         [Test]
         public void Power_Null()
         {
-            Assert.Throws<ArgumentNullException>(() => Program.Add("5", null));
-            Assert.Throws<ArgumentNullException>(() => Program.Add(null, "55"));
-            Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power("5", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "55"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
         }
     }
 }
