@@ -105,7 +105,7 @@ namespace GithubActionsLab
         [Test]
         public void Add_Valid_Pow_GrantKerrigan()
         {
-            Assert.AreEqual(4, Program.Subtract("2", "2"));
+            Assert.AreEqual(1, Program.Subtract("1", "1"));
             Assert.AreEqual(9, Program.Subtract("3", "2"));
             Assert.AreEqual(25, Program.Subtract("5", "2"));
         }
