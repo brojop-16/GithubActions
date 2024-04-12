@@ -92,7 +92,7 @@ namespace GithubActionsLab
         public void Divide_ByZero()
         {
             Assert.AreEqual(3, Program.Divide("18", "6"));
-            Assert.AreEqual(9, Program.Divide("9", "3"));
+            Assert.AreEqual(3, Program.Divide("9", "3"));
             Assert.AreEqual(2, Program.Divide("4", "2"));
         }
 
