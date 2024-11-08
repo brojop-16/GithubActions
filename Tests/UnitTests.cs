@@ -111,7 +111,7 @@ namespace GithubActionsLab
         }
 
          [Test]
-        public void Divide_Invalid()
+        public void Power_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
